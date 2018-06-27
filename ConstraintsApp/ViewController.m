@@ -53,6 +53,10 @@
     self.heightConstraint.constant = constant;
     self.widthConstraint.constant = constant;
     
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+    } completion:nil];
+    
 }
 
 - (IBAction)blueViewButtonTapped:(UIButton *)sender {
@@ -80,6 +84,10 @@
     
     self.heightConstraint.constant = constant;
     self.widthConstraint.constant = constant;
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.view layoutIfNeeded];
+    } completion:nil];
 }
 
 -(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
